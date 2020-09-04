@@ -71,6 +71,7 @@ nav .menu ul li a {
 .search input{
     height: 40px;
     width: 40%;
+    min-width: 280px;
     margin: 0 auto;
     padding: 8px;
     outline: none;
@@ -89,6 +90,7 @@ nav .menu ul li a {
 
 .row1{
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
 }
 
@@ -112,7 +114,7 @@ nav .menu ul li a {
     color: #ecf0f1;
     background: #2c3e50;
     padding: 10px;
-    margin-top: 10px;
+    margin: 10px 0;
     text-align: center;
     font-size: 1.2rem;
     transition: all 0.4s ease-in;
@@ -128,7 +130,7 @@ nav .menu ul li a {
 }
 
 .row1 .info div{
-    height: 40px;
+    height: auto;
     background: #ecf0f1;
     margin-bottom: 5px;
     line-height: 40px;
