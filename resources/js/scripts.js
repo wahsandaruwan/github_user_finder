@@ -33,6 +33,12 @@ window.onload = function(){
                     document.getElementById("hire").style.backgroundColor = "#e74c3c"
                     document.getElementById("hire").innerHTML = "Not Hireable";
                 }
+
+                // Set Short Info
+                document.getElementById("pr").innerHTML = user.public_repos;
+                document.getElementById("pg").innerHTML = user.public_gists;
+                document.getElementById("fol").innerHTML = user.followers;
+                document.getElementById("fo").innerHTML = user.following;
             }
         };
         xhr.send();

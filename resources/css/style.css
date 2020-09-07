@@ -149,7 +149,7 @@ nav .menu ul li a {
     margin-bottom: 5px;
     line-height: 35px;
     padding: 0 20px;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     font-weight: bold;
 }
 
@@ -158,8 +158,9 @@ nav .menu ul li a {
 }
 
 .row1 .info .short{
+    min-width: 300px;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     margin-top: 20px;
     font-size: 0.6rem;
@@ -167,7 +168,7 @@ nav .menu ul li a {
 
 .row1 .info .short > *{
     padding: 5px;
-    margin: 0 5px;
+    margin: 0 3px;
     border-radius: 10px;
 }
 
