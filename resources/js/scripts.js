@@ -6,7 +6,7 @@ window.onload = function(){
         let cl_id  = '98dbd3a6356198af532a';
         let cl_sec = 'e35acdb1bedef92fb2dfe09b04930555dc061d83';
 
-        // Ajax for send requests
+        // Ajax for send requests (https://api.github.com/users/username?client_id&client_secret)
         let xhr = new XMLHttpRequest();
         xhr.open("GET","https://api.github.com/users/"+userName+"?client_id="+cl_id+"&client_secret="+cl_sec, true);
         xhr.onload = function(){
