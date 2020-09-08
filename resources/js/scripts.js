@@ -12,6 +12,42 @@ window.onload = function(){
         xhr.onload = function(){
             if(this.status == 200){
                 let user = JSON.parse(this.responseText);
+
+                document.getElementById('cnt').innerHTML = 
+                `<div class="row1">
+                    <div class="img">
+                        <img id="primg" src="${user.avatar_url}" alt="">
+                        <div class="hire" id="hire"></div>
+                        <a href="" class="visit" id="vp" target="_blank">Visit Profile</a>
+                    </div>
+                    <div class="info">
+                        <div>Name : <span id="name"></span></div>
+                        <div>Company : <span id="company"></span></div>
+                        <div>Blog : <span id="blog"></span></div>
+                        <div>Location : <span id="location"></span></div>
+                        <div>Email : <span id="email"></span></div>
+        
+                        <div class="short">
+                            <div class="pr">Public Repos : <span id="pr"></span></div>
+                            <div class="pr">Public Gists : <span id="pg"></span></div>
+                            <div class="pr">Followers : <span id="fol"></span></div>
+                            <div class="pr">Following : <span id="fo"></span></div>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="row2">
+                    <div class="bio">
+                        <h3>Bio</h3>
+                        <p id="bio">${user.bio}</p>
+                    </div>
+        
+                    <div class="meminfo">
+                        <p>Member Since : <span id="msince"></span></p>
+                        <p>Latest Update : <span  id="lastup"></span></p>
+                    </div>
+                </div>`;
+
                 // Set Name
                 document.getElementById("name").innerHTML = user.name;
                 // Set Image
@@ -39,6 +75,16 @@ window.onload = function(){
                 document.getElementById("pg").innerHTML = user.public_gists;
                 document.getElementById("fol").innerHTML = user.followers;
                 document.getElementById("fo").innerHTML = user.following;
+
+                // Set view profile button
+                document.getElementById("vp").href = user.html_url;
+
+                // Set Bio
+                document.getElementById("bio").innerHTML = user.bio;
+                
+                // Set Member Info
+                document.getElementById("msince").innerHTML = user.created_at;
+                document.getElementById("lastup").innerHTML = user.updated_at;
             }
         };
         xhr.send();
