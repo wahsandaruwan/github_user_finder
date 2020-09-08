@@ -7,31 +7,32 @@ window.onload = function(){
         let cl_sec = 'e35acdb1bedef92fb2dfe09b04930555dc061d83';
 
         // Ajax for send requests (https://api.github.com/users/username?client_id&client_secret)
+        // Get Github Users Informations
         let xhr = new XMLHttpRequest();
         xhr.open("GET","https://api.github.com/users/"+userName+"?client_id="+cl_id+"&client_secret="+cl_sec, true);
         xhr.onload = function(){
             if(this.status == 200){
                 let user = JSON.parse(this.responseText);
 
-                document.getElementById('cnt').innerHTML = 
+                document.getElementById("cnt").innerHTML = 
                 `<div class="row1">
                     <div class="img">
                         <img id="primg" src="${user.avatar_url}" alt="">
-                        <div class="hire" id="hire"></div>
-                        <a href="" class="visit" id="vp" target="_blank">Visit Profile</a>
+                        <div class="hire" id="hire">${(user.hireable == true) ? 'Hireable' : 'Not Hireable'}</div>
+                        <a href="${user.html_url}" class="visit" id="vp" target="_blank">Visit Profile</a>
                     </div>
                     <div class="info">
-                        <div>Name : <span id="name"></span></div>
-                        <div>Company : <span id="company"></span></div>
-                        <div>Blog : <span id="blog"></span></div>
-                        <div>Location : <span id="location"></span></div>
-                        <div>Email : <span id="email"></span></div>
+                        <div>Name : <span id="name">${user.name}</span></div>
+                        <div>Company : <span id="company">${user.company}</span></div>
+                        <div>Blog : <span id="blog">${user.blog}</span></div>
+                        <div>Location : <span id="location">${user.location}</span></div>
+                        <div>Email : <span id="email">${user.email}</span></div>
         
                         <div class="short">
-                            <div class="pr">Public Repos : <span id="pr"></span></div>
-                            <div class="pr">Public Gists : <span id="pg"></span></div>
-                            <div class="pr">Followers : <span id="fol"></span></div>
-                            <div class="pr">Following : <span id="fo"></span></div>
+                            <div class="pr">Public Repos : <span id="pr">${user.public_repos}</span></div>
+                            <div class="pr">Public Gists : <span id="pg">${user.public_gists}</span></div>
+                            <div class="pr">Followers : <span id="fol">${user.followers}</span></div>
+                            <div class="pr">Following : <span id="fo">${user.following}</span></div>
                         </div>
                     </div>
                 </div>
@@ -43,48 +44,43 @@ window.onload = function(){
                     </div>
         
                     <div class="meminfo">
-                        <p>Member Since : <span id="msince"></span></p>
-                        <p>Latest Update : <span  id="lastup"></span></p>
+                        <p>Member Since : <span id="msince">${user.created_at}</span></p>
+                        <p>Latest Update : <span  id="lastup">${user.updated_at}</span></p>
+                    </div>
+
+                    <div class="repos" id="rp">
+                        <h3>Repos</h3>
                     </div>
                 </div>`;
 
-                // Set Name
-                document.getElementById("name").innerHTML = user.name;
-                // Set Image
-                document.getElementById("primg").src = user.avatar_url;
-                // Set Company
-                document.getElementById("company").innerHTML = user.company;
-                // Set Blog
-                document.getElementById("blog").innerHTML = user.blog;
-                // Set Location
-                document.getElementById("location").innerHTML = user.location;
-                // Set Email
-                document.getElementById("email").innerHTML = user.email;
-                // Set Hireable
+                // Set Hire Color
                 if(user.hireable == true){
-                    document.getElementById("hire").style.backgroundColor = "#27ae60"
-                    document.getElementById("hire").innerHTML = "Hireable";
+                    document.getElementById("hire").style.backgroundColor = '#44bd32';
                 }
                 else{
-                    document.getElementById("hire").style.backgroundColor = "#e74c3c"
-                    document.getElementById("hire").innerHTML = "Not Hireable";
+                    document.getElementById("hire").style.backgroundColor = '#e84118';
                 }
 
-                // Set Short Info
-                document.getElementById("pr").innerHTML = user.public_repos;
-                document.getElementById("pg").innerHTML = user.public_gists;
-                document.getElementById("fol").innerHTML = user.followers;
-                document.getElementById("fo").innerHTML = user.following;
+                // Create new Ajax request for get Repos
+                let xhrnew = new XMLHttpRequest();
+                xhrnew.open("GET", "https://api.github.com/users/"+userName+"/repos?client_id="+cl_id+"&client_secret="+cl_sec, true);
+                xhrnew.onload = function(){
+                    if(this.status == 200){
+                        let repos = JSON.parse(this.responseText);
+                        console.log(repos.name);
+                        for(let i = 0; i < repos.length; i++){
+                            console.log(repos[i].name);
+                            document.getElementById("rp").innerHTML += 
+                            `<div class="rep">
+                                <h4>${repos[i].name}</h4>
+                                <p>${repos[i].description}</p>
+                                <a href="${repos[i].html_url}">View Repo</a>
+                            </div>`;
+                        }
+                    }
+                };
+                xhrnew.send();
 
-                // Set view profile button
-                document.getElementById("vp").href = user.html_url;
-
-                // Set Bio
-                document.getElementById("bio").innerHTML = user.bio;
-                
-                // Set Member Info
-                document.getElementById("msince").innerHTML = user.created_at;
-                document.getElementById("lastup").innerHTML = user.updated_at;
             }
         };
         xhr.send();

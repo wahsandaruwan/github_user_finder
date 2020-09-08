@@ -27,7 +27,7 @@ nav .logo div{
 }
 
 nav .logo div span{
-    background: #2c3e50;
+    background: #e74c3c;
     padding: 4px;
     color: #ecf0f1;
 }
@@ -35,7 +35,7 @@ nav .logo div span{
 nav .logo div:not(span){
     background: #ecf0f1;
     padding: 6px;
-    color: #2c3e50;
+    color: #e74c3c;
 }
 
 nav .menu{
@@ -57,7 +57,7 @@ nav .menu ul li{
 
 nav .menu ul li a {
     text-decoration: none;
-    color: #000;
+    color: #fff;
 }
 
 /* Search */
@@ -83,10 +83,10 @@ nav .menu ul li a {
 .container{
     width: 100%;
     height: auto;
-    padding: 50px;
+    padding: 10px;
 }
 
-/* User Info */
+/* User Info - Row1*/
 .row1{
     width: 60%;
     margin: 0 auto 20px auto;
@@ -111,7 +111,7 @@ nav .menu ul li a {
     width: 200px;
     min-width: 180px;
     height: auto;
-    border: #2c3e50 5px solid;
+    border: #e74c3c 5px solid;
 }
 
 .row1 .img .hire{
@@ -126,7 +126,7 @@ nav .menu ul li a {
 .row1 .img a{
     text-decoration: none;
     color: #ecf0f1;
-    background: #2c3e50;
+    background: #e74c3c;
     padding: 10px;
     margin: 10px 0;
     text-align: center;
@@ -136,7 +136,7 @@ nav .menu ul li a {
 
 .row1 .img a:hover{
     background: #ecf0f1;
-    color: #2c3e50;
+    color: #e74c3c;
 }
 
 .row1 .info{
@@ -188,8 +188,9 @@ nav .menu ul li a {
     background: #e67e22;
 }
 
+/* User Info - Row2*/
 .row2{
-    width: 40%;
+    width: 50%;
     margin: 0 auto 20px auto;
     display: flex;
     flex-wrap: wrap;
@@ -198,8 +199,9 @@ nav .menu ul li a {
 
 .row2 > div{
     width: 70%;
+    min-width: 300px;
     text-align: center;
-    background: #2c3e50;
+    background: #e74c3c;
     padding: 18px;
     margin-bottom: 20px;
     color: #fff;
@@ -213,10 +215,45 @@ nav .menu ul li a {
 .row2 .meminfo p{
     text-align: left;
     padding: 5px;
+    font-weight: bold;
 }
 
 .row2 .meminfo p span{
     font-size: 0.9rem;
+    font-weight: normal;
+}
+
+.row2 .repos{
+    height: 200px;
+    overflow: auto;
+}
+.row2 .rep{
+    text-align: left;
+    margin: 20px 0;
+    background: #bdc3c7;
+    padding: 20px;
+    color: #e74c3c;
+}
+
+.row2 .rep p{
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+    margin-top: 5px;
+}
+
+.row2 .rep a{
+    font-size: 0.9rem;
+    background: #e74c3c;
+    padding: 5px 10px;
+    text-decoration: none;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.3s ease-in;
+}
+
+.row2 .rep a:hover{
+    background: #fff;
+    color: #e74c3c;
 }
 
 /* Responsive */
