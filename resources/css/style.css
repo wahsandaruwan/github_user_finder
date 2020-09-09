@@ -48,13 +48,14 @@ nav .menu ul{
     width: 100%;
     list-style-type: none;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
 }
 
 nav .menu ul li{
-    font-size: 1rem;
+    font-size: 0.9rem;
     text-align: center;
+    margin: 0 10px;
 }
 
 nav .menu ul li a {
@@ -74,11 +75,12 @@ nav .menu ul li a {
     width: 40%;
     min-width: 280px;
     margin: 0 auto;
-    padding: 8px;
+    padding: 8px 8px 8px 15px;
     outline: none;
     font-size: 1.2rem;
     border-radius: 5px;
     border-style: none;
+    font-size: 1rem;
 }
 
 /* Body */
@@ -99,6 +101,10 @@ nav .menu ul li a {
 
 .row1 > div{
     padding: 0 30px;
+}
+
+.row1 > div:nth-child(2){
+    min-width: 320px;
 }
 
 .row1 .img{
@@ -132,7 +138,7 @@ nav .menu ul li a {
     padding: 10px;
     margin: 10px 0;
     text-align: center;
-    font-size: 1.2rem;
+    font-size: 1rem;
     transition: all 0.4s ease-in;
 }
 
@@ -146,10 +152,10 @@ nav .menu ul li a {
 }
 
 .row1 .info > div:not(:nth-child(6)){
-    height: 35px;
+    height: auto;
     background: #ecf0f1;
     margin-bottom: 5px;
-    line-height: 35px;
+    line-height: 30px;
     padding: 0 20px;
     font-size: 0.8rem;
     font-weight: bold;
@@ -160,7 +166,6 @@ nav .menu ul li a {
 }
 
 .row1 .info .short{
-    min-width: 300px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -201,7 +206,7 @@ nav .menu ul li a {
 
 .row2 > div{
     width: 70%;
-    min-width: 300px;
+    min-width: 280px;
     text-align: center;
     background: #e74c3c;
     padding: 18px;
