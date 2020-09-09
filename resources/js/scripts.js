@@ -17,7 +17,7 @@ window.onload = function(){
             xhr.onload = function(){
                 if(this.status == 200){
                     let user = JSON.parse(this.responseText);
-                    
+
                     // Fill cnt element with cutom elements with data
                     document.getElementById("cnt").innerHTML = 
                     `<div class="row1">
@@ -54,7 +54,7 @@ window.onload = function(){
                         </div>
 
                         <div class="repos" id="rp">
-                            <h3>Repos</h3>
+                            <h3>Latest Repos</h3>
                         </div>
                     </div>`;
 
@@ -79,7 +79,7 @@ window.onload = function(){
                                 `<div class="rep">
                                     <h4>${repos[i].name}</h4>
                                     <p>${repos[i].description}</p>
-                                    <a href="${repos[i].html_url}">View Repo</a>
+                                    <a href="${repos[i].html_url}" target="_blank">View Repo</a>
                                 </div>`;
                             }
                         }
