@@ -1,9 +1,11 @@
 // Run when page loads
 window.onload = function(){
+    // Set search field empty when refresh
+    document.getElementById("searchUser").value = "";
     // Catch letters while typing
     document.getElementById("searchUser").addEventListener("keyup", function(event){
         // If Not empty
-        if(document.getElementById("searchUser").value != ""){
+        if(document.getElementById("searchUser").value != ""){            
             // Get keyword
             let userName = event.target.value;
             // Get client id and client secret from github
