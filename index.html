@@ -4,9 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Github User Finder</title>
+    <!-- Styling -->
     <link rel="stylesheet" href="./resources/css/style.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+    <!-- Main Script -->
     <script src="./resources/js/main.js"></script>
-    
+
 </head>
 <body id="bd">
     <!-- Nav Bar -->
@@ -17,7 +21,7 @@
         <div class="menu">
             <ul>
                 <li><a href="#" id="ab">About Me</a></li>
-                <li><a href="#">Contact Me</a></li>
+                <li><a href="#" id="con">Contact Me</a></li>
             </ul>
         </div>
     </nav>
@@ -33,7 +37,7 @@
     </div>
 
     <!-- Modal for About Me -->
-    <div class="modal-container-about" id="mc">
+    <div class="modal-container-about" id="ma">
         <div class="modal-a">
             <h2>About Me!</h2>
             <p>
@@ -43,11 +47,26 @@
         </div>
     </div>
 
+    <!-- Modal for Contact Me -->
+    <div class="modal-container-contact" id="mc">
+        <div class="modal-c">
+            <h2>Contact Me!</h2>
+            <div class="cont">
+                <a href=""><i class="fab fa-linkedin"></i></a>
+                <a href=""><i class="fab fa-twitter"></i></a>
+                <a href=""><i class="fab fa-instagram"></i></a>
+                <a href=""><i class="fas fa-envelope-square"></i></a>
+            </div>
+            <a href="" id="closec">Close</a>
+        </div>
+    </div>
+
     <!-- Footer -->
     <footer>
         <p>Designed & Developed by WAHSANDARUWAN | 2020 &copy; All Rights Reserved</p>
     </footer>
 
+    <!-- Modal Scripts -->
     <script src="./resources/js/modals.js"></script>
 </body>
 </html>

@@ -270,8 +270,9 @@ nav .menu ul li a {
 }
 
 /* Modals */
-/* About Me */
-.modal-container-about{
+/* Both About Me and Contact Me */
+.modal-container-about,
+.modal-container-contact{
     position: fixed;
     top: 0;
     left: 0;
@@ -286,7 +287,8 @@ nav .menu ul li a {
     transition: all 0.5s ease-in;
 }
 
-.modal-a{
+.modal-a,
+.modal-c{
     background: #7f8081;
     width: 500px;
     padding: 30px 50px;
@@ -297,18 +299,14 @@ nav .menu ul li a {
     color: #fff;
 }
 
-.modal-a h2{
+.modal-a h2,
+.modal-c h2{
     font-size: 1.3rem;
     padding: 10px 0;
 }
 
-.modal-a p{
-    font-size: 0.9rem;
-    padding-bottom: 20px;
-    opacity: 0.9;
-}
-
-.modal-a a{
+.modal-a > a,
+.modal-c > a{
     width: 150px;
     height: 20px;
     text-decoration: none;
@@ -321,9 +319,43 @@ nav .menu ul li a {
     transition: all 0.3s ease-in;
 }
 
-.modal-a a:hover{
+.modal-a > a:hover,
+.modal-c > a:hover{
     color: #e74c3c;
     background: #fff;
+}
+
+/* Only About Me */
+.modal-a p{
+    font-size: 0.9rem;
+    padding-bottom: 20px;
+    opacity: 0.9;
+}
+
+/* Only Contact Me */
+.modal-c .cont{
+    padding-bottom: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.modal-c .cont a{
+    text-decoration: none;
+    color: #fff;
+    background: #e84118;
+    padding: 5px;
+    border-radius: 3px;
+    margin: 0 10px;
+    transition: all 0.4s ease-in;
+}
+
+.modal-c .cont a:hover{
+    color: #e84118;
+    background: #fff;
+}
+
+.modal-c .cont a i{
+    font-size: 1.5rem;
 }
 
 .show-modal{
