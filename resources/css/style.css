@@ -10,11 +10,26 @@
 
 /* Body */
 body{
-    background: #bdc3c7;
+    background: url(../images/back.jpg) no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+}
+
+.over{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgb(127, 128, 129, 0.5);
+    z-index: -1;
 }
 
 /* Navbar */
 nav{
+    position: relative;
+    z-index: 2;
     display: flex;
     width: 100%;
     justify-content: space-between;
@@ -71,7 +86,7 @@ nav .menu ul li a {
     text-decoration: none;
     color: #e74c3c;
     background: #fff;
-    padding: 6px 10px;
+    padding: 6px 15px;
     border-radius: 5px;
     transition: all 0.4s ease-in;
 }
@@ -306,13 +321,8 @@ nav .menu ul li a:hover{
     padding-top: 10px;
 }
 
-/* Dummy */
-.dm{
-    height: 30px;
-}
-
 /* Modals */
-/* Both About Me and Contact Me */
+/* Both About and Contact Me */
 .modal-container-about,
 .modal-container-contact{
     position: fixed;
@@ -367,7 +377,7 @@ nav .menu ul li a:hover{
     background: #fff;
 }
 
-/* Only About Me */
+/* Only About */
 .modal-a p{
     font-size: 0.9rem;
     padding-bottom: 20px;

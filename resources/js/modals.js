@@ -1,5 +1,5 @@
-// For About Me
-// Open About Me modal when clicks about me link
+// For About
+// Open About modal when clicks about link
 document.getElementById("ab").addEventListener("click", function(event){
     event.preventDefault();
     document.getElementById("ma").classList.add("show-modal");
@@ -11,8 +11,8 @@ document.getElementById("closea").addEventListener("click", function(event){
     document.getElementById("ma").classList.remove("show-modal");
 });
 
-// For Contact Me
-// Open Contact Me modal when clicks contact me link
+// For Contact
+// Open Contact modal when clicks contact link
 document.getElementById("con").addEventListener("click", function(event){
     event.preventDefault();
     document.getElementById("mc").classList.add("show-modal");
