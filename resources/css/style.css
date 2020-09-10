@@ -231,7 +231,7 @@ nav .menu ul li a {
 }
 
 .row2 .repos{
-    height: 190px;
+    height: 195px;
     overflow: auto;
 }
 
@@ -269,71 +269,7 @@ nav .menu ul li a {
     padding-top: 10px;
 }
 
-/* footer */
-footer{
-    width: 100%;
-    height: 40px;
-    position: fixed;
-    bottom: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto;
-    background: #e74c3c;
-}
-
-footer p{
-    font-size: 0.9rem;
-    color: #fff;
-    padding: 10px 20px;
-    text-align: center;
-}
-
-/* Responsive */
-@media(max-width: 900px){
-    /* Navbar */
-    nav{
-        padding: 10px 60px;
-    }
-
-    /* Footer */
-    footer p{
-        font-size: 0.8rem;
-    }
-}
-
-@media(max-width: 600px){
-    /* Navbar */
-    nav{
-        display: block;
-    }
-    
-    nav > div{
-        width: 250px;
-        margin: 0 auto;
-        padding: 10px 0;
-    }
-
-    /* Footer */
-    footer p{
-        font-size: 0.6rem;
-    }
-
-}
-
-@media(max-width: 420px){
-    /* Navbar */
-    nav{
-        padding: 10px 20px;
-    }
-
-    /* Footer */
-    footer p{
-        width: 60%;
-    }
-}
-
-/* Style Modals */
+/* Modals */
 /* About Me */
 .modal-container-about{
     position: fixed;
@@ -393,4 +329,73 @@ footer p{
 .show-modal{
     opacity: 1;
     pointer-events: auto;
+}
+
+/* footer */
+footer{
+    width: 100%;
+    height: 40px;
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    background: #e74c3c;
+}
+
+footer p{
+    font-size: 0.9rem;
+    color: #fff;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+/* Responsive */
+@media(max-width: 962px){
+    /* Navbar */
+    nav{
+        padding: 10px 60px;
+    }
+
+    /* Repos */
+    .row2 .repos{
+        height: 230px;
+    }
+
+    /* Footer */
+    footer p{
+        font-size: 0.8rem;
+    }
+}
+
+@media(max-width: 600px){
+    /* Navbar */
+    nav{
+        display: block;
+    }
+    
+    nav > div{
+        width: 250px;
+        margin: 0 auto;
+        padding: 10px 0;
+    }
+
+    /* Footer */
+    footer p{
+        font-size: 0.6rem;
+    }
+
+}
+
+@media(max-width: 420px){
+    /* Navbar */
+    nav{
+        padding: 10px 20px;
+    }
+
+    /* Footer */
+    footer p{
+        width: 60%;
+    }
 }
