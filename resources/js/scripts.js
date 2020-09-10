@@ -29,11 +29,11 @@ window.onload = function(){
                             <a href="${user.html_url}" class="visit" id="vp" target="_blank">Visit Profile</a>
                         </div>
                         <div class="info">
-                            <div>Name : <span id="name">${user.name}</span></div>
-                            <div>Company : <span id="company">${user.company}</span></div>
-                            <div>Blog : <span id="blog">${user.blog}</span></div>
-                            <div>Location : <span id="location">${user.location}</span></div>
-                            <div>Email : <span id="email">${user.email}</span></div>
+                            <div>Name : <span id="name">${(user.name != null) ? user.name : 'Not Provided'}</span></div>
+                            <div>Company : <span id="company">${(user.company != null) ? user.company : 'Not Provided'}</span></div>
+                            <div>Blog : <span id="blog">${(user.blog != "") ? user.blog : 'Not Provided'}</span></div>
+                            <div>Location : <span id="location">${(user.location != null) ? user.location : 'Not Provided'}</span></div>
+                            <div>Email : <span id="email">${(user.email != null) ? user.email : 'Not Provided'}</span></div>
             
                             <div class="short">
                                 <div class="pr">Public Repos : <span id="pr">${user.public_repos}</span></div>
@@ -47,7 +47,7 @@ window.onload = function(){
                     <div class="row2">
                         <div class="bio">
                             <h3>Bio</h3>
-                            <p id="bio">${user.bio}</p>
+                            <p id="bio">${(user.bio != null) ? user.bio : 'Not Provided'}</p>
                         </div>
             
                         <div class="meminfo">
