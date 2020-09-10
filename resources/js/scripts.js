@@ -51,8 +51,8 @@ window.onload = function(){
                         </div>
             
                         <div class="meminfo">
-                            <p>Member Since : <span id="msince">${user.created_at}</span></p>
-                            <p>Latest Update : <span  id="lastup">${user.updated_at}</span></p>
+                            <p>Member Since : <span id="msince">${(user.created_at.replace("T"," (Time : ")).replace("Z",")")}</span></p>
+                            <p>Latest Update : <span  id="lastup">${(user.updated_at.replace("T"," (Time : ")).replace("Z",")")}</span></p>
                         </div>
 
                         <div class="repos" id="rp">
