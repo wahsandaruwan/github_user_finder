@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Github User Finder</title>
     <link rel="stylesheet" href="./resources/css/style.css">
-    <script src="./resources/js/scripts.js"></script>
+    <script src="./resources/js/main.js"></script>
+    
 </head>
 <body id="bd">
     <!-- Nav Bar -->
@@ -15,8 +16,8 @@
         </div>
         <div class="menu">
             <ul>
-                <li><a href="">About Us</a></li>
-                <li><a href="">Contact Us</a></li>
+                <li><a href="#" id="ab">About Me</a></li>
+                <li><a href="#">Contact Me</a></li>
             </ul>
         </div>
     </nav>
@@ -31,9 +32,22 @@
         <!-- This will dynamically fill with JS -->
     </div>
 
+    <!-- Modal for About Me -->
+    <div class="modal-container-about" id="mc">
+        <div class="modal-a">
+            <h2>About Me!</h2>
+            <p>
+                Hi! I am WAHSANDARUWAN. I am a technology geek and I love programming and software development as well. If you wish to hire me you can contact me through the contact section. Thanks for using this App.
+            </p>
+            <a href="" id="closea">Close</a>
+        </div>
+    </div>
+
     <!-- Footer -->
     <footer>
         <p>Designed & Developed by WAHSANDARUWAN | 2020 &copy; All Rights Reserved</p>
     </footer>
+
+    <script src="./resources/js/modals.js"></script>
 </body>
 </html>

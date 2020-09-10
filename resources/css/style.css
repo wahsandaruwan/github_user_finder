@@ -332,3 +332,65 @@ footer p{
         width: 60%;
     }
 }
+
+/* Style Modals */
+/* About Me */
+.modal-container-about{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background: rgb(231, 76, 60, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.5s ease-in;
+}
+
+.modal-a{
+    background: #7f8081;
+    width: 500px;
+    padding: 30px 50px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    margin: 0 15px;
+    text-align: center;
+    color: #fff;
+}
+
+.modal-a h2{
+    font-size: 1.3rem;
+    padding: 10px 0;
+}
+
+.modal-a p{
+    font-size: 0.9rem;
+    padding-bottom: 20px;
+    opacity: 0.9;
+}
+
+.modal-a a{
+    width: 150px;
+    height: 20px;
+    text-decoration: none;
+    background: #e74c3c;
+    padding: 5px 20px;
+    font-size: 0.9rem;
+    border-radius: 2px;
+    margin: 0 auto;
+    color: #fff;
+    transition: all 0.3s ease-in;
+}
+
+.modal-a a:hover{
+    color: #e74c3c;
+    background: #fff;
+}
+
+.show-modal{
+    opacity: 1;
+    pointer-events: auto;
+}
