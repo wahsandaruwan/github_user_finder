@@ -104,7 +104,7 @@ window.onload = function(){
         // If empty
         else{
             // Set cnt element empty
-            document.getElementById("cnt").innerHTML = ``;
+            document.getElementById("cnt").innerHTML = `<h1>Github User Finder</h1>`;
         }
     });
 }

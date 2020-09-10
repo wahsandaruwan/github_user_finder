@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Playball&display=swap');
+
 /* Reset */
 *{
     padding: 0;
@@ -118,9 +120,20 @@ nav .menu ul li a:hover{
 
 /* Body */
 .container{
+    position: relative;
     width: 100%;
     height: auto;
     padding: 10px;
+}
+
+.container h1{
+    font-family: 'Playball';
+    font-size: 6rem;
+    font-weight: 800;
+    text-align: center;
+    padding: 60px 0;
+    color: #fff;
+    -webkit-text-stroke: #e74c3c 4px;
 }
 
 /* User Info - Row1*/
@@ -462,6 +475,12 @@ footer p{
     nav > div{
         width: 250px;
         margin: 0 auto;
+        padding: 10px 0;
+    }
+
+    /* Container Heading */
+    .container h1{
+        font-size: 5rem;
         padding: 10px 0;
     }
 
