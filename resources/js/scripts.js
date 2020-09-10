@@ -79,7 +79,7 @@ window.onload = function(){
                                 console.log(repos[i].name);
                                 document.getElementById("rp").innerHTML += 
                                 `<div class="rep">
-                                    <h4>${repos[i].name}</h4>
+                                    <h4>${repos[i].name}<span> (${repos[i].language})</span></h4>
                                     <p>${repos[i].description}</p>
                                     <a href="${repos[i].html_url}" target="_blank">View Repo</a>
                                 </div>`;
