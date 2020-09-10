@@ -44,7 +44,7 @@ window.onload = function(){
                         </div>
                     </div>
         
-                    <div class="row2">
+                    <div class="row2" id="r2">
                         <div class="bio">
                             <h3>Bio</h3>
                             <p id="bio">${(user.bio != null) ? user.bio : 'Not Provided'}</p>
@@ -75,13 +75,22 @@ window.onload = function(){
                         if(this.status == 200){
                             let repos = JSON.parse(this.responseText);
                             console.log(repos.name);
-                            for(let i = 0; i < repos.length; i++){
-                                console.log(repos[i].name);
+                            if(repos.length > 0){
+                                for(let i = 0; i < repos.length; i++){
+                                    console.log(repos[i].name);
+                                    // Append Repos
+                                    document.getElementById("rp").innerHTML += 
+                                    `<div class="rep">
+                                        <h4>${repos[i].name}<span> (${repos[i].language})</span></h4>
+                                        <p>${repos[i].description}</p>
+                                        <a href="${repos[i].html_url}" target="_blank">View Repo</a>
+                                    </div>`;
+                                }
+                            }
+                            else{
                                 document.getElementById("rp").innerHTML += 
                                 `<div class="rep">
-                                    <h4>${repos[i].name}<span> (${repos[i].language})</span></h4>
-                                    <p>${repos[i].description}</p>
-                                    <a href="${repos[i].html_url}" target="_blank">View Repo</a>
+                                    <h3>There are no any public Repositories</h3>
                                 </div>`;
                             }
                         }
