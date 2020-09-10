@@ -129,11 +129,10 @@ nav .menu ul li a:hover{
 .container h1{
     font-family: 'Playball';
     font-size: 6rem;
-    font-weight: 800;
     text-align: center;
     padding: 60px 0;
     color: #fff;
-    -webkit-text-stroke: #e74c3c 4px;
+    -webkit-text-stroke: #e74c3c 3px;
 }
 
 /* User Info - Row1*/
