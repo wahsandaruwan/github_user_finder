@@ -23,15 +23,23 @@ nav{
     padding: 10px 200px;
 }
 
+nav .logo{
+    width: 230px;
+    display: flex;
+    justify-content: center;
+}
+
 nav .logo div{
     font-size: 1.4rem;
     text-align: center;
+    border-radius: 5px;
 }
 
 nav .logo div span{
     background: #e74c3c;
     padding: 4px;
     color: #ecf0f1;
+    border-radius: 5px;
 }
 
 nav .logo div:not(span){
@@ -41,7 +49,8 @@ nav .logo div:not(span){
 }
 
 nav .menu{
-    width: 180px;
+    width: 230px;
+    height: auto;
 }
 
 nav .menu ul{
@@ -55,12 +64,21 @@ nav .menu ul{
 nav .menu ul li{
     font-size: 0.9rem;
     text-align: center;
-    margin: 0 10px;
+    margin: 0 5px;
 }
 
 nav .menu ul li a {
     text-decoration: none;
+    color: #e74c3c;
+    background: #fff;
+    padding: 6px 10px;
+    border-radius: 5px;
+    transition: all 0.4s ease-in;
+}
+
+nav .menu ul li a:hover{
     color: #fff;
+    background: #7f8081;
 }
 
 /* Search */
@@ -103,12 +121,9 @@ nav .menu ul li a {
     padding: 0 30px;
 }
 
-.row1 > div:nth-child(2){
-    min-width: 320px;
-}
-
 .row1 .img{
     position: relative;
+    border-radius: 5px;
 }
 
 .row1 .img > *{
@@ -120,6 +135,7 @@ nav .menu ul li a {
     min-width: 180px;
     height: auto;
     border: #e74c3c 5px solid;
+    border-radius: 5px;
 }
 
 .row1 .img .hire{
@@ -129,6 +145,7 @@ nav .menu ul li a {
     font-size: 0.7rem;
     background: #fff;
     padding: 4px;
+    border-radius: 3px;
 }
 
 .row1 .img a{
@@ -139,6 +156,7 @@ nav .menu ul li a {
     margin: 10px 0;
     text-align: center;
     font-size: 1rem;
+    border-radius: 5px;
     transition: all 0.4s ease-in;
 }
 
@@ -149,6 +167,7 @@ nav .menu ul li a {
 
 .row1 .info{
     display: block;
+    min-width: 320px;
 }
 
 .row1 .info > div:not(:nth-child(6)){
@@ -159,6 +178,7 @@ nav .menu ul li a {
     padding: 0 20px;
     font-size: 0.8rem;
     font-weight: bold;
+    border-radius: 5px;
 }
 
 .row1 .info > div span{
@@ -212,6 +232,16 @@ nav .menu ul li a {
     padding: 18px;
     margin-bottom: 20px;
     color: #fff;
+    border-radius: 5px;
+}
+
+.row2 .bio p{
+    text-align: left;
+    background: #fff;
+    color: #e74c3c;
+    padding: 10px;
+    font-size: 0.9rem;
+    border-radius: 5px;
 }
 
 .row2 h3{
@@ -221,26 +251,32 @@ nav .menu ul li a {
 
 .row2 .meminfo p{
     text-align: left;
-    padding: 5px;
-    font-weight: bold;
+    font-weight: normal;
+    background: #fff;
+    color: #e74c3c;
+    padding: 6px;
+    margin: 5px 0;
+    border-radius: 5px;
 }
 
 .row2 .meminfo p span{
     font-size: 0.9rem;
-    font-weight: normal;
+    font-weight: lighter;
 }
 
 .row2 .repos{
     height: 195px;
     overflow: auto;
+    border-radius: 5px;
 }
 
 .row2 .rep{
     text-align: left;
     margin: 20px auto;
-    background: #bdc3c7;
+    background: #fff;
     padding: 20px;
     color: #e74c3c;
+    border-radius: 5px;
 }
 
 .row2 .rep p{
@@ -256,17 +292,23 @@ nav .menu ul li a {
     text-decoration: none;
     color: #fff;
     cursor: pointer;
+    border-radius: 5px;
     transition: all 0.3s ease-in;
 }
 
 .row2 .rep a:hover{
-    background: #fff;
-    color: #e74c3c;
+    background: #bdc3c7;
+    color: #e84118;
 }
 
 .row2 .rep h3{
     text-align: center;
     padding-top: 10px;
+}
+
+/* Dummy */
+.dm{
+    height: 30px;
 }
 
 /* Modals */
@@ -313,7 +355,7 @@ nav .menu ul li a {
     background: #e74c3c;
     padding: 5px 20px;
     font-size: 0.9rem;
-    border-radius: 2px;
+    border-radius: 5px;
     margin: 0 auto;
     color: #fff;
     transition: all 0.3s ease-in;
@@ -344,7 +386,7 @@ nav .menu ul li a {
     color: #fff;
     background: #e84118;
     padding: 5px;
-    border-radius: 3px;
+    border-radius: 5px;
     margin: 0 10px;
     transition: all 0.4s ease-in;
 }
