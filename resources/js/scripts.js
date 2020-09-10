@@ -70,7 +70,7 @@ window.onload = function(){
 
                     // Create new Ajax request for get Repos
                     let xhrnew = new XMLHttpRequest();
-                    xhrnew.open("GET", "https://api.github.com/users/"+userName+"/repos?client_id="+cl_id+"&client_secret="+cl_sec, true);
+                    xhrnew.open("GET", "https://api.github.com/users/"+userName+"/repos?client_id="+cl_id+"&client_secret="+cl_sec+"&sort=created:asc", true);
                     xhrnew.onload = function(){
                         if(this.status == 200){
                             let repos = JSON.parse(this.responseText);
