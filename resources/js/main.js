@@ -77,7 +77,7 @@ window.onload = function(){
                             console.log(repos.name);
                             if(repos.length > 0){
                                 // Clear rp element first
-                                document.getElementById("rp").innerHTML = ``;
+                                document.getElementById("rp").innerHTML = `<h3>Latest Repos</h3>`;
                                 // Populate rep element
                                 for(let i = 0; i < repos.length; i++){
                                     console.log(repos[i].name);
@@ -85,7 +85,7 @@ window.onload = function(){
                                     document.getElementById("rp").innerHTML += 
                                     `<div class="rep">
                                         <h4>${repos[i].name}<span> (${repos[i].language})</span></h4>
-                                        <p>${repos[i].description}</p>
+                                        <p>${(repos[i].description != null) ? repos[i].description : "Not Provided"}</p>
                                         <a href="${repos[i].html_url}" target="_blank">View Repo</a>
                                     </div>`;
                                 }
