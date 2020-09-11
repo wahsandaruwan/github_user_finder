@@ -77,6 +77,7 @@ window.onload = function(){
                             console.log(repos.name);
                             if(repos.length > 0){
                                 // Clear rp element first
+                                document.getElementById("rp").innerHTML = ``;
                                 document.getElementById("rp").innerHTML = `<h3>Latest Repos</h3>`;
                                 // Populate rep element
                                 for(let i = 0; i < repos.length; i++){
