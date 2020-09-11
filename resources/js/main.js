@@ -76,6 +76,9 @@ window.onload = function(){
                             let repos = JSON.parse(this.responseText);
                             console.log(repos.name);
                             if(repos.length > 0){
+                                // Clear rp element first
+                                document.getElementById("rp").innerHTML = ``;
+                                // Populate rep element
                                 for(let i = 0; i < repos.length; i++){
                                     console.log(repos[i].name);
                                     // Append Repos

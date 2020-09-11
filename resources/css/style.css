@@ -132,7 +132,7 @@ nav .menu ul li a:hover{
     text-align: center;
     padding: 60px 0;
     color: #fff;
-    -webkit-text-stroke: #e74c3c 3px;
+    -webkit-text-stroke: #e74c3c 2px;
 }
 
 /* User Info - Row1*/
