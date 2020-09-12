@@ -132,7 +132,6 @@ nav .menu ul li a:hover{
     text-align: center;
     padding: 60px 0;
     color: #fff;
-    -webkit-text-stroke: #e74c3c 2px;
 }
 
 /* User Info - Row1*/
@@ -158,6 +157,7 @@ nav .menu ul li a:hover{
 }
 
 .row1 .img img{
+    position: relative;
     width: 200px;
     min-width: 180px;
     height: auto;
@@ -448,6 +448,15 @@ footer p{
     color: #fff;
     padding: 10px 20px;
     text-align: center;
+}
+
+/* Dark Mode */
+.dark-mode{
+    filter: invert(1) hue-rotate(210deg);
+}
+
+.invert{
+    filter: invert(1) hue-rotate(210deg);
 }
 
 /* Responsive */

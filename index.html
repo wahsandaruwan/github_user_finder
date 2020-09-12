@@ -14,9 +14,9 @@
 </head>
 <body id="bd">
     <!-- Overlay -->
-    <div class="over"></div>
+    <div class="over darkm"></div>
     <!-- Nav Bar -->
-    <nav>
+    <nav class="darkm">
         <div class="logo">
             <div>Github <span>User</span> Finder</div>
         </div>
@@ -24,18 +24,19 @@
             <ul>
                 <li><a href="#" id="ab">About</a></li>
                 <li><a href="#" id="con">Contact</a></li>
+                <li><a href="#" id="dark">Dark</a></li>
             </ul>
         </div>
     </nav>
 
     <!-- Search -->
-    <div class="search">
+    <div class="search darkm">
         <input type="text" id="searchUser" placeholder="Search Github User...">
     </div>
 
     <!-- body -->
     <div class="container" id="cnt">
-        <h1>Github User Finder</h1>
+        <h1 class="darkm"">Github User Finder</h1>
         <!-- This will dynamically fill with JS -->
     </div>
 
@@ -67,10 +68,12 @@
     </div>
 
     <!-- Footer -->
-    <footer>
+    <footer id="ftr" class="foo">
         <p>Designed & Developed by WAHSANDARUWAN | 2020 &copy; All Rights Reserved</p>
     </footer>
 
+    <!-- Darkmode Scripts -->
+    <script src="./resources/js/darkmode.js"></script>
     <!-- Modal Scripts -->
     <script src="./resources/js/modals.js"></script>
 </body>

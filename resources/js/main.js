@@ -24,7 +24,7 @@ window.onload = function(){
                     document.getElementById("cnt").innerHTML = 
                     `<div class="row1">
                         <div class="img">
-                            <img id="primg" src="${user.avatar_url}" alt="">
+                            <img id="primg" class="inverted" src="${user.avatar_url}" alt="">
                             <div class="hire" id="hire">${(user.hireable == true) ? 'Hireable' : 'Not Hireable'}</div>
                             <a href="${user.html_url}" class="visit" id="vp" target="_blank">Visit Profile</a>
                         </div>
@@ -74,7 +74,7 @@ window.onload = function(){
                     xhrnew.onload = function(){
                         if(this.status == 200){
                             let repos = JSON.parse(this.responseText);
-                            console.log(repos.name);
+                            // console.log(repos.name);
                             if(repos.length > 0){
                                 // Clear rp element first
                                 document.getElementById("rp").innerHTML = ``;
@@ -110,5 +110,6 @@ window.onload = function(){
             // Set cnt element empty
             document.getElementById("cnt").innerHTML = `<h1>Github User Finder</h1>`;
         }
+        
     });
 }
