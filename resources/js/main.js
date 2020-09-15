@@ -111,7 +111,7 @@ window.onload = function(){
         else{
             // Display Dark button
             document.getElementById("dark").style.display = "block";
-            // Set cnt element empty
+            // Clear cnt element and add SVG logo again
             document.getElementById("cnt").innerHTML = `
             <div class="logo darkm ro" id="logo">
                 <svg width="852" height="130" viewBox="0 0 852 130" fill="none" xmlns="http://www.w3.org/2000/svg">
