@@ -14,4 +14,6 @@
 * Quick Response
 * User Freindly Interface
 
+### License : MIT
+
 ### You are welcome to update this source code if it contains any miss matches.
